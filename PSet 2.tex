@@ -1,0 +1,193 @@
+\documentclass{report}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{Math 115 QR \\
+PSet 2}}
+\author{\huge{Alex Hernandez Juarez}}
+\date{July 17 2024}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+\chapter{}
+\section{Problem 1: Gottlieb 27.1.4}
+
+\qs{}{(a) A farmer has planted corn on a rectangular plot of land 800 meters by 1000 meters.
+A straight stream runs alongside one of the long borders of the plot, and the farmer's
+irrigation system is such that his yield decreases with the distance from the stream. Suppose his yield is given by
+$f(x) = 50 - 0.3\sqrt{x}$ ears of corn per square meter, where $x$ is the distance from the stream in meters. What is the farmer's yield
+from the plot? \\
+(b) A second farmer plants his corn in a circular plot with radius 80 meters and he has
+a centralized irrigation system located in the middle of his field. His yield drops
+with the distance from the center of the field. Suppose his yield is also given by 
+$f(x) = 50 - 0.3 \sqrt{x}$ ears of corn per square meter, this time $x$ being the distance 
+from the center of the field. What is the farmers yield for this plot?
+}
+
+\sol{ 
+	\\
+	(a) \\
+	$f(x) = 50 - 0.3 \sqrt{x}$ \\
+	area of the $i^{th}$ slice $ = 1000 \Delta x$ \\
+	ears of corn in the $i^{th}$ slice $ = 1000 \Delta x \cdot \left( 50 - 0.3 \sqrt{x} \right)$ \\
+	total corn $ = \sum^{n}_{i=1} \left( 50 - 0.3\sqrt{x}\right) \cdot 1000 \Delta x$ \\
+	total corn $ = \int_{0}^{800} \left( 50 - 0.3 \sqrt{x} \right) \cdot 1000  dx$
+	\begin{center}
+		\[ \int_{0}^{800} \left( 50 - 0.3 \sqrt{x} \right) \cdot 1000 dx  = 1000 \int_{0}^{800} \left( 50 - 0.3 \sqrt{x} \right) dx \]
+		\[ 1000 \int_{0}^{800} \left( 50 - 0.3 \sqrt{x} \right) dx = \int_{0}^{800} 50000 - 300\sqrt{x} dx \]
+		\[  \int_{0}^{800} 50000 - 300\sqrt{x} dx = 50000x - 200x\sqrt{x} \Big|^{800}_{0}\]
+		\[ 50000x - 200x\sqrt{x} \Big|^{800}_{0} = 50000(800) - 200(800)\sqrt{800} \] 
+		\[ 50000(800) - 200(800)\sqrt{800} = 35,474,516.6004 \] 
+	\end{center}
+	(b) \\
+	$f(x) = 50 - 0.3 \sqrt{x}$ \\
+	area of the $i^{th}$ slice $ = 2\pi x \Delta x$\\
+	ears of corn in the $i^{th}$ slice = $ 2 \pi x \Delta x \left(50 - 0.3\sqrt{x}\right)$ \\
+	total corn $ = \sum^{n}_{i=1} 2\pi \left(50x - 0.3x \sqrt{x} \right) \Delta x $ \\
+	total corn $ = \int_{0}^{80} 2\pi \left(50x - 0.3x \sqrt{x} \right) dx $ \\
+	\begin{center}
+		\[\int_{0}^{80} 2\pi \left(50x - 0.3x \sqrt{x} \right) dx  = 2 \pi \int_{0}^{80} 50x - 0.3x \sqrt{x} dx \] 
+		\[2 \pi \int_{0}^{80} 50x - 0.3x \sqrt{x} dx = \int_{0}^{80} 100 \pi x - 0.3 \cdot 2 \pi x^{\frac{3}{2}} dx \] 
+		\[\int_{0}^{80} 100 \pi x - 0.3 \cdot 2 \pi x^{\frac{3}{2}} dx = 50 \pi x^{2} - \frac{3 \pi x^{2} \sqrt{x}}{25} \Big|_{0}^{80}\] 
+		\[ 50 \pi x^{2} - \frac{3 \pi x^{2} \sqrt{x}}{25} \Big|_{0}^{80} =  983,729.4183\] 
+	\end{center}
+}
+
+\section{Problem 2: Gottlieb 27.1.5}
+\qs{}{Consider a box of cereal with raisins. The box is 5 centimeters deep, 25 centimeters
+tall, and 16 centimeters wide. The raisins tend to fall toward the bottom; assume their density is 
+given by $\rho (h) = \frac{4}{h+10}$ raisins per cubic centimeter, where $h$ is the above the 
+bottom of the box. How many raisins are in the box?}
+\sol{
+	\\
+	$ w = 16 $ \\
+	$ h = 25 $ \\
+	$ l = 55 $ \\
+	area of the $i^{th} $ slice is $  16 \cdot 5 \Delta h = 80 \Delta x $ \\
+	cereal in the $i^{th}$ slice is $ 80 \Delta x \frac{4}{h + 10}$ \\
+	$ \int_{0}^{25} 80 \frac{4}{h + 10} dx$
+
+	\begin{center}
+	\[ \int_{0}^{25} 80 \frac{4}{h + 10} dh = \frac{320}{h + 10} dh\] 
+		
+	\end{center} 
+	}
+
+\section{Problem 3: Gottlieb 27.1.14}
+\qs{}{Liquid is being stored in a large spherical tank of radius 2 meters. The tank is completely
+full and has been left standing for a long time. A mineral suspended in the liquid is
+setting. Its density at a depth of $h$ meters from the top is given by $5h$ milligrams per
+cubic meter. Determine the number of milligrams of the mineral contained in the tank.}
+\sol{
+	volume = $ 2 \pi r  \Delta h$ \\
+	density = $\left( 2 \pi r h_{i} \Delta h \right) 5h$ \\
+	$ r_{i} = \sqrt{4 - h_{i}^2}$  \\
+	raisins = $\left( 2 \pi \sqrt{4 - h_{i}^{2}} \right) \cdot \Delta h \cdot  5h$ 
+	\begin{center}
+		\[ \int_{0}^{2} \left( 2 \pi \sqrt{4 - h_{i}^{2}} \right)  5h dh\] 
+	\end{center}
+	
+}
+
+\section{Problem 4: Gottlieb 27.1.21 } 
+\qs{}{A circus tent has cylindrical symmetry about its center pole. The height a distance of
+$x$ feet from the center pole is given by $ h(x) = \frac{8}{1 + \frac{x^{2}}{16}}$ feet. What is 
+the volume of the enclosed by the tent of radius 4.}
+\sol {
+	Volume of $i^{th}$ slice is $ \pi r^{2} \frac{h_{i}}{3} $ \\
+	$\frac{r}{\frac{8}{1+\frac{x^2}{16}}} = \frac{\Delta h}{h_{i}}$ \\
+	$r h_{i} = \frac{8 \cdot \Delta h}{1+\frac{x^2}{16}}$ \\
+	$r = \frac{16 \Delta h}{2h_{i} + x^{2}h_{i}}$ \\
+	volume of the $i^{th}$ slice is $\pi \frac{}{}$  
+	\begin{center}
+	\end{center}
+} 
+
+\section{Problem 5: Stewart 6.4.8}
+\qs{}{A spring has a natural length of 40 cm. \\
+(a) If a 60-N force is required to keep the spring compressed 10 cm, how much
+work is done during this compression?  \\
+(b) How much work is required to compress the spring to a length of 25 cm?}
+
+\sol{
+	\\ 
+	(a)
+	\begin{center}
+		\[ f(x) = kx \]
+		\[ 60 N = k .1 \]
+		\[ k = \frac{60}{0.1} = 600\]   
+		\[ \int_{0}^{0.1} 600 x \space dx = \left( 300x^{2} \right) \big|_{0}^{10}\] 
+		\[ \left( 300x^{2} \right) \big|_{0}^{10} = 300(0.1)^{2} = 3 \text{ J} \] 
+	\end{center}
+	(b)
+	\begin{center}
+		\[ \int_{0}^{0.15} 600 x \space dx = \left( 300x^{2} \right) \big|_{0}^{10}\] 
+		\[ \left( 300x^{2} \right) \big|_{0}^{10} = 300(0.15)^{2} = 6.75 \text{ J} \] 
+	\end{center}
+
+}
+
+\section{Problem 6: Stewart 6.4.12}
+\qs{}{If 6 J of work is needed to stretch a spring from 10 cm to 12 cm and another 10 J is needed to stretch it from 12 cm
+to 14 cm, what is the natural length of the spring?}
+\sol{
+	\begin{center}
+		\[ \left( yx^{2} \right) \big|_{a}^{a + 2} = y(a + 2)^{2} - y(a)^{2} = 6 \text{ J} \] 
+		\[ y(a + 2)^{2} - y(a)^{2} = 6 \] 
+		\[ y(a + 4)^{2} - y(a+2)^{2} = 10 \] 
+		\[ y(l -0.14)^{2} - y(l -.012)^{2} = 10 \] 
+		\[ y\left(l - \frac{7}{50}\right)^{2} - y\left(l - \frac{3}{25}\right)^{2} = 10\] 
+		\[ y\left(l - \frac{3}{25}\right)^{2} - y\left(l - \frac{1}{10}\right)^{2} = 6 \] 
+		\[ y\left( \left(l - \frac{7}{50}\right)^{2} - \left(l - \frac{3}{25}\right)^{2} \right) = 10\] 
+		\[ y\left(\left(l - \frac{3}{25}\right)^{2} - y\left(l - \frac{1}{10}\right)^{2}\right)= 6 \] 
+		\[ y\left( \left(l - \frac{7}{50} - l + \frac{3}{25}\right) \left(l - \frac{7}{50} + l +\frac{3}{25}\right)\right) \]  
+		\[ y\left( \left(l - \frac{3}{25} - l + \frac{1}{10}\right) \left(l - \frac{3}{25} + l +\frac{1}{10}\right)\right) \]  
+		\[ y\left(\left(-\frac{7}{50} + \frac{3}{25}\right) \left(l - \frac{7}{50} + l - \frac{3}{25}\right)\right)\] 
+
+
+
+
+	\end{center}
+
+}
+
+\section{Problem 7: Stewart 6.4.14}
+\qs{}{A thick cable, 60 ft long and weighing 180 lb, hangs from a
+winch on a crane. Compute in two different ways the work
+done if the winch winds up 25 ft of the cable. \\
+(a) Follow the method of Example 4 \\
+(b) Write a function for the weight of the remaining cable
+after $x$ feet has been wound up by the winch. Estimate
+the amount of work done when the winch pulls up $\Delta x$ feet of cable }
+\sol{
+	\begin{center}
+		\[ |I- S_{n}| \leq \frac{M(b-a)^5}{180n^{4}} \] 
+		\[ |I - S_{n}| \leq \frac{96(1-0)^{5}}{180n^{4}} \] 
+		\[ \frac{96(1)^{5}}{180n^{4}} \geq 0.01 \] 
+		\[ \frac{96}{180n^{4}} \geq 0.01 \] 
+		\[ 96 \leq 1.8n^{4} \] 
+		\[ \frac{96}{1.8} \leq n^{4} \] 
+		\[ \sqrt[4]{\frac{96}{1.8}} \leq n \]
+		\[ \sqrt[4]{ \frac{96}{1.8}} \approx 2.702 \]  
+	\end{center}
+	$n$ can't be an be a decimal or an odd number so, $n \geq 4$
+}
+
+\section{Problem 8: Stewart 6.4.24}
+\qs{}{A tank is full of water. Find the work required to pump
+the water out of the spout. $r = 3$m and spout = 1m}
+
+\section{}
+\qs{}{A tank is full of water. Find the work required to pump
+the water out of the spout. In Exercises 25 and 26 use the fact that
+water weighs 62.5 lb/ft$^{3}$. Traingular prism with $h = 6$, $w = 10$, and slope = 12}
+\end{document}
