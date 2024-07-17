@@ -69,15 +69,17 @@ given by $\rho (h) = \frac{4}{h+10}$ raisins per cubic centimeter, where $h$ is 
 bottom of the box. How many raisins are in the box?}
 \sol{
 	\\
-	$ w = 16 $ \\
+	$ w = 5 $ \\
 	$ h = 25 $ \\
-	$ l = 55 $ \\
+	$ l = 16 $ \\
 	area of the $i^{th} $ slice is $  16 \cdot 5 \Delta h = 80 \Delta x $ \\
 	cereal in the $i^{th}$ slice is $ 80 \Delta x \frac{4}{h + 10}$ \\
 	$ \int_{0}^{25} 80 \frac{4}{h + 10} dx$
 
 	\begin{center}
-	\[ \int_{0}^{25} 80 \frac{4}{h + 10} dh = \frac{320}{h + 10} dh\] 
+	\[ \int_{0}^{25} 80 \frac{4}{h + 10} dh = \int_{0}^{25}\frac{320}{h + 10} dh \] 
+	\[ \int_{0}^{25}\frac{320}{h + 10} dh = 320 \ln(x+10) \Big|_{0}^{25}\] 
+	\[ 320 \ln(x+10) \Big|_{0}^{25} = 320ln(25+10) - 320 ln(0 + 10) \approx 400.884\] 
 		
 	\end{center} 
 	}
@@ -88,12 +90,14 @@ full and has been left standing for a long time. A mineral suspended in the liqu
 setting. Its density at a depth of $h$ meters from the top is given by $5h$ milligrams per
 cubic meter. Determine the number of milligrams of the mineral contained in the tank.}
 \sol{
-	volume = $ 2 \pi r  \Delta h$ \\
-	density = $\left( 2 \pi r h_{i} \Delta h \right) 5h$ \\
+	volume of $i^{th}$ slice $= \pi r^{2}  \Delta h$ \\
 	$ r_{i} = \sqrt{4 - h_{i}^2}$  \\
-	raisins = $\left( 2 \pi \sqrt{4 - h_{i}^{2}} \right) \cdot \Delta h \cdot  5h$ 
+	raisins in $i^{th}$ slice = $\pi \left( \sqrt{4 - h_{i}^{2}} \right)^{2} \cdot \Delta h \cdot  5h$ 
 	\begin{center}
-		\[ \int_{0}^{2} \left( 2 \pi \sqrt{4 - h_{i}^{2}} \right)  5h dh\] 
+		\[ \int_{0}^{2} \pi \left(4 - h^{2}\right)  5h dh + \int_{0}^{2} \pi (4-h^{2}) 5(h+2) dh \]
+		\[ 5 \pi \int_{0}^{2} 4x-x^{3} dx = 10 \pi x^{2} - \frac{5 \pi x^{4}}{4} \Big|_{0}^{2} = 20 \pi \]  
+		\[ \int_{0}^{2} \pi (4-h^{2}) 5(h+2) dh = 10 \pi x^{2} + 40 \pi x - \frac{5 \pi x^{4} }{4} - \frac{10 \pi x^{3}}{3} \approx 230.3835\] 
+		\[ \int_{0}^{2} \pi \left(4 - h^{2}\right)  5h dh + \int_{0}^{2} \pi (4-h^{2}) 5(h+2) dh \approx 293.215\]
 	\end{center}
 	
 }
@@ -103,12 +107,9 @@ cubic meter. Determine the number of milligrams of the mineral contained in the 
 $x$ feet from the center pole is given by $ h(x) = \frac{8}{1 + \frac{x^{2}}{16}}$ feet. What is 
 the volume of the enclosed by the tent of radius 4.}
 \sol {
-	Volume of $i^{th}$ slice is $ \pi r^{2} \frac{h_{i}}{3} $ \\
-	$\frac{r}{\frac{8}{1+\frac{x^2}{16}}} = \frac{\Delta h}{h_{i}}$ \\
-	$r h_{i} = \frac{8 \cdot \Delta h}{1+\frac{x^2}{16}}$ \\
-	$r = \frac{16 \Delta h}{2h_{i} + x^{2}h_{i}}$ \\
-	volume of the $i^{th}$ slice is $\pi \frac{}{}$  
+	Volume of $i^{th}$ slice is: $\pi x h_{i} \Delta x$   
 	\begin{center}
+		\[ \int_{0}^{4} 2\pi x \frac{8}{1 + \frac{x^{2}}{16}} dx = 278.731\] 
 	\end{center}
 } 
 
@@ -149,10 +150,17 @@ to 14 cm, what is the natural length of the spring?}
 		\[ y\left(l - \frac{3}{25}\right)^{2} - y\left(l - \frac{1}{10}\right)^{2} = 6 \] 
 		\[ y\left( \left(l - \frac{7}{50}\right)^{2} - \left(l - \frac{3}{25}\right)^{2} \right) = 10\] 
 		\[ y\left(\left(l - \frac{3}{25}\right)^{2} - y\left(l - \frac{1}{10}\right)^{2}\right)= 6 \] 
-		\[ y\left( \left(l - \frac{7}{50} - l + \frac{3}{25}\right) \left(l - \frac{7}{50} + l +\frac{3}{25}\right)\right) \]  
-		\[ y\left( \left(l - \frac{3}{25} - l + \frac{1}{10}\right) \left(l - \frac{3}{25} + l +\frac{1}{10}\right)\right) \]  
-		\[ y\left(\left(-\frac{7}{50} + \frac{3}{25}\right) \left(l - \frac{7}{50} + l - \frac{3}{25}\right)\right)\] 
-
+		\[ y\left( \left(l - \frac{7}{50} - l + \frac{3}{25}\right) \left(l - \frac{7}{50} + l +\frac{3}{25}\right)\right) = 10\]  
+		\[ y\left( \left(l - \frac{3}{25} - l + \frac{1}{10}\right) \left(l - \frac{3}{25} + l +\frac{1}{10}\right)\right) = 6 \]  
+		\[ y\left(\left(-\frac{7}{50} + \frac{3}{25}\right) \left(l - \frac{7}{50} + l - \frac{3}{25}\right)\right) = 10\] 
+		\[ y\left(\left(-\frac{3}{25} + \frac{1}{10}\right) \left(l - \frac{3}{25} + l - \frac{1}{10}\right)\right) = 6\] 
+		\[ y \left( - \frac{1}{50} \left(2l - \frac{13}{50} \right)\right) = 10 \]
+		\[ y \left( - \frac{1}{50} \left(2l - \frac{11}{50} \right)\right) = 6 \]
+		\[ \frac{2l - \frac{13}{50}}{2l - \frac{11}{50}} = \frac{5}{3} \] 
+		\[ \frac{100l - 13}{100l - 11} = \frac{5}{3}\]
+		\[ 300l - 39 = 500 l - 55 \] 
+		\[ -200l = -16 \] 
+		\[ l = \frac{2}{25} \] 
 
 
 
@@ -169,25 +177,54 @@ done if the winch winds up 25 ft of the cable. \\
 after $x$ feet has been wound up by the winch. Estimate
 the amount of work done when the winch pulls up $\Delta x$ feet of cable }
 \sol{
+	(a) \\
+	Weight per foot: $\frac{180}{60} = 3$ lb/ft 
 	\begin{center}
-		\[ |I- S_{n}| \leq \frac{M(b-a)^5}{180n^{4}} \] 
-		\[ |I - S_{n}| \leq \frac{96(1-0)^{5}}{180n^{4}} \] 
-		\[ \frac{96(1)^{5}}{180n^{4}} \geq 0.01 \] 
-		\[ \frac{96}{180n^{4}} \geq 0.01 \] 
-		\[ 96 \leq 1.8n^{4} \] 
-		\[ \frac{96}{1.8} \leq n^{4} \] 
-		\[ \sqrt[4]{\frac{96}{1.8}} \leq n \]
-		\[ \sqrt[4]{ \frac{96}{1.8}} \approx 2.702 \]  
+		\[ W = \lim_{n \to \infty} \sum^{n}_{i=1} 3 x_{i} \Delta x \] 
+		\[ \int_{0}^{25} 3x dx = \frac{3}{2}x^{2} \Big|_{0}^{25} \] 
+		\[ \frac{3}{2}x^{2} \Big|_{0}^{25} = \frac{3}{2}(25)^{2} = 937.5\] 
 	\end{center}
-	$n$ can't be an be a decimal or an odd number so, $n \geq 4$
+	(b) 
+	\begin{center}
+		\[ w = 180 - 3x \] 
+	\end{center}
+	What does that second part mean? 
+
 }
 
 \section{Problem 8: Stewart 6.4.24}
 \qs{}{A tank is full of water. Find the work required to pump
 the water out of the spout. $r = 3$m and spout = 1m}
+\sol{
+	Volume of $i^{th}$ slice is $\pi r^{2} dh$
+	\begin{center}
+		\[ \left( \frac{r_{i}}{2} \right)^{2}=  3^{2} - h_{i}^{2} \] 
+		\[ \frac{r_{i}^{2}}{4} = 3^{2} - h_{i}^{2}\] 
+		\[ r_{i}^{2} = 4(3)^{2} - 4h_{i}^{2} \]
+		\[ r_{i} = \sqrt{36 - 4h_{i}^{2}}\]  
+	\end{center}
+	$\int_{0}^{7}  \left(\sqrt{36 - 4h_{i}^{2}}\right) dh $ \\
+	$\pi \int_{0}^{7}  36 - 4h_{i}^{2} dh $ 
+
+}
 
 \section{}
 \qs{}{A tank is full of water. Find the work required to pump
 the water out of the spout. In Exercises 25 and 26 use the fact that
-water weighs 62.5 lb/ft$^{3}$. Traingular prism with $h = 6$, $w = 10$, and slope = 12}
+water weighs 62.5 lb/ft$^{3}$. Traingular prism with $h = 6$, $w = 10$, and $ l = 12$}
+
+\sol{ 
+	The ratio of the legs is $\frac{12}{6}$ which is $2$ so the length will always be $2$ times the height.
+	This is important as we are going to use the property of similar traignles. \\
+	Height = $h_{i}$ \\
+	Width = $10$ \\
+	Length = $2h_{i}$ \\
+	Volume of i$^{th}$ slice is $(10)(2h_{i}) \Delta h $
+	Amount of water in i$^{th}$ slice is $(10)(2h_{i})(62.5) \Delta h$
+	\begin{center}
+		\[ \text{Total work required to pump the water: } \int_{0}^{6} (62.5)(20h)(6-h) dh = 45000 \] 
+	\end{center}
+
+	
+}
 \end{document}

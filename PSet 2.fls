@@ -526,8 +526,6 @@ INPUT /home/alexhernandezjuarez/.miktex/texmfs/install/fonts/vf/public/newpx/zpl
 INPUT /home/alexhernandezjuarez/.miktex/texmfs/install/fonts/tfm/public/newpx/NewPXMI_gnu.tfm
 INPUT /home/alexhernandezjuarez/.miktex/texmfs/install/fonts/tfm/public/newpx/NewPXMI.tfm
 INPUT /home/alexhernandezjuarez/.miktex/texmfs/install/fonts/tfm/public/newtx/stxscr.tfm
-INPUT /home/alexhernandezjuarez/.miktex/texmfs/install/fonts/vf/public/newpx/zplsym.vf
-INPUT /home/alexhernandezjuarez/.miktex/texmfs/install/fonts/tfm/public/newtx/ntxsym.tfm
 INPUT PSet 2.aux
 INPUT /home/alexhernandezjuarez/.miktex/texmfs/install/fonts/type1/public/newpx/NewPXMI.pfb
 INPUT /home/alexhernandezjuarez/.miktex/texmfs/install/fonts/type1/public/newpx/NewPXMI.pfb
@@ -557,5 +555,3 @@ INPUT /home/alexhernandezjuarez/.miktex/texmfs/install/fonts/type1/public/newpx/
 INPUT /home/alexhernandezjuarez/.miktex/texmfs/install/fonts/type1/public/newpx/pxsys.pfb
 INPUT /home/alexhernandezjuarez/.miktex/texmfs/install/fonts/type1/public/newtx/txexs.pfb
 INPUT /home/alexhernandezjuarez/.miktex/texmfs/install/fonts/type1/public/newtx/txexs.pfb
-INPUT /home/alexhernandezjuarez/.miktex/texmfs/install/fonts/type1/public/newtx/txsym.pfb
-INPUT /home/alexhernandezjuarez/.miktex/texmfs/install/fonts/type1/public/newtx/txsym.pfb
