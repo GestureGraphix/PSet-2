@@ -46,7 +46,7 @@ from the center of the field. What is the farmers yield for this plot?
 		\[ 1000 \int_{0}^{800} \left( 50 - 0.3 \sqrt{x} \right) dx = \int_{0}^{800} 50000 - 300\sqrt{x} dx \]
 		\[  \int_{0}^{800} 50000 - 300\sqrt{x} dx = 50000x - 200x\sqrt{x} \Big|^{800}_{0}\]
 		\[ 50000x - 200x\sqrt{x} \Big|^{800}_{0} = 50000(800) - 200(800)\sqrt{800} \] 
-		\[ 50000(800) - 200(800)\sqrt{800} = 35,474,516.6004 \] 
+		\[ 50000(800) - 200(800)\sqrt{800} = 35,474,516.6004 \text{ ears of corn} \] 
 	\end{center}
 	(b) \\
 	$f(x) = 50 - 0.3 \sqrt{x}$ \\
@@ -58,7 +58,7 @@ from the center of the field. What is the farmers yield for this plot?
 		\[\int_{0}^{80} 2\pi \left(50x - 0.3x \sqrt{x} \right) dx  = 2 \pi \int_{0}^{80} 50x - 0.3x \sqrt{x} dx \] 
 		\[2 \pi \int_{0}^{80} 50x - 0.3x \sqrt{x} dx = \int_{0}^{80} 100 \pi x - 0.3 \cdot 2 \pi x^{\frac{3}{2}} dx \] 
 		\[\int_{0}^{80} 100 \pi x - 0.3 \cdot 2 \pi x^{\frac{3}{2}} dx = 50 \pi x^{2} - \frac{3 \pi x^{2} \sqrt{x}}{25} \Big|_{0}^{80}\] 
-		\[ 50 \pi x^{2} - \frac{3 \pi x^{2} \sqrt{x}}{25} \Big|_{0}^{80} =  983,729.4183\] 
+		\[ 50 \pi x^{2} - \frac{3 \pi x^{2} \sqrt{x}}{25} \Big|_{0}^{80} =  983,729.4183 \text{ ears of corn}\] 
 	\end{center}
 }
 
@@ -79,7 +79,7 @@ bottom of the box. How many raisins are in the box?}
 	\begin{center}
 	\[ \int_{0}^{25} 80 \frac{4}{h + 10} dh = \int_{0}^{25}\frac{320}{h + 10} dh \] 
 	\[ \int_{0}^{25}\frac{320}{h + 10} dh = 320 \ln(x+10) \Big|_{0}^{25}\] 
-	\[ 320 \ln(x+10) \Big|_{0}^{25} = 320ln(25+10) - 320 ln(0 + 10) \approx 400.884 \text{raisins}\] 
+	\[ 320 \ln(x+10) \Big|_{0}^{25} = 320ln(25+10) - 320 ln(0 + 10) \approx 400.884 \approx 401 \text{ raisins}\] 
 		
 	\end{center} 
 	}
@@ -94,7 +94,9 @@ cubic meter. Determine the number of milligrams of the mineral contained in the 
 	$ r_{i} = \sqrt{4 - (2-h)_{i}^2}$  \\
 	raisins in $i^{th}$ slice = $\pi \left( \sqrt{4 - h_{i}^{2}} \right)^{2} \cdot \Delta h \cdot  5h$ 
 	\begin{center}
-		\[ \int_{0}^{4} (5h) \pi 4 - (2-h_{i})^{2} dh  \text {mg of mineral}\]
+		\[ \int_{0}^{4} (5h) \pi \left(4 - (2-h_{i})^{2} \right) dh \] 
+		\[ \int_{0}^{4} (5h) \pi \left(4 - (2-h_{i})^{2} \right) dh = \left( \frac{20 \ pi x ^{3}}{3} - \frac{5 \pi x^{4}}{4} \right)\]
+		\[ \frac{20 \pi \cdot 4^{3}}{3} - \frac{5 \pi \cdot 4^{4}}{4} - \left( \frac{20 \pi \cdot 0^{3}}{3} - \frac{5 \pi \cdot 0^{4}}{4}\right) = \frac{320pi }{3} \approx 335.103\text { mg of mineral}\]
 	\end{center}
 	
 }
@@ -106,7 +108,16 @@ the volume of the enclosed by the tent of radius 4.}
 \sol {
 	Volume of $i^{th}$ slice is: $\pi x h_{i} \Delta x$   
 	\begin{center}
-		\[ \int_{0}^{4} 2\pi x \frac{8}{1 + \frac{x^{2}}{16}} dx = 278.731\] 
+		\[ \int_{0}^{4} 2\pi x \frac{8}{1 + \frac{x^{2}}{16}} dx \] 
+		\[ 16 \pi \int_{0}^{4} x \frac{1}{\frac{16 + x^{2}}{16}}\] 
+		\[ 16 \pi \int_{0}^{4}  \frac{16x}{16 + x^{2}}\] 
+		\[ 16 + x^{2} = t\]
+		\[ 16 \pi \int_{0}^{4} \frac{8}{t} dt \]
+		\[ 16 \pi \cdot 8 \ln(|t|) \] 
+		\[ 16 \pi \cdot 8 \ln(|16 + x^{2}|) \] 
+		\[ 128 \pi \cdot \ln(16 + x^{2}) \Big|_{0}^{4} \]
+		\[ 128 \pi \cdot \ln\left(16 + 4^{2} \right) - 128 \pi \cdot \ln\left(16 + 0^{2} \right) = 128 \pi \cdot ln (2)\]  
+		\[ 128 \pi \cdot ln (2) \approx 278.731\] 
 	\end{center}
 } 
 
