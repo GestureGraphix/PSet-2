@@ -196,19 +196,19 @@ the amount of work done when the winch pulls up $\Delta x$ feet of cable }
 \qs{}{A tank is full of water. Find the work required to pump
 the water out of the spout. $r = 3$m and spout = 1m}
 \sol{
-	Volume of $i^{th}$ slice is $\pi r^{2} dh$
+	\\
+	Volume of $i^{th}$ slice is $\pi r^{2} dh$ \\
+	Work is the distance traveled times the amount of water moved\\
 	\begin{center}
-		\[ \left( \frac{r_{i}}{2} \right)^{2}=  3^{2} - h_{i}^{2} \] 
-		\[ \frac{r_{i}^{2}}{4} = 3^{2} - h_{i}^{2}\] 
-		\[ r_{i}^{2} = 4(3)^{2} - 4h_{i}^{2} \]
-		\[ r_{i} = \sqrt{36 - 4h_{i}^{2}}\]  
+		\[ r_{i}^{2} = 3^{2} - h_{i}^{2}\] 
+		\[ r_{i} = \sqrt{3^{2} - h_{i}^{2}} \]
+		\[ W = \pi \int_{-3}^{3} (4-y) 9 - h^{2} dh \] 
+		\[ W = \left( 36 \pi - \frac{4x^{3}}{3} - \frac{9 \pi x^{2}}{2} + \frac{x^{4}}{4}\right) \Big|_{-3}^{3} \] 
+		\[ W = 144 \pi \approx 451.389\] 
 	\end{center}
-	$\int_{0}^{7}  \left(\sqrt{36 - 4h_{i}^{2}}\right) dh $ \\
-	$\pi \int_{0}^{7}  36 - 4h_{i}^{2} dh $ 
-
 }
 
-\section{}
+\section{Problem 9: Stewart 6.4.26}
 \qs{}{A tank is full of water. Find the work required to pump
 the water out of the spout. In Exercises 25 and 26 use the fact that
 water weighs 62.5 lb/ft$^{3}$. Traingular prism with $h = 6$, $w = 10$, and $ l = 12$}
@@ -219,12 +219,11 @@ water weighs 62.5 lb/ft$^{3}$. Traingular prism with $h = 6$, $w = 10$, and $ l 
 	Height = $h_{i}$ \\
 	Width = $10$ \\
 	Length = $2h_{i}$ \\
-	Volume of i$^{th}$ slice is $(10)(2h_{i}) \Delta h $
+	Volume of i$^{th}$ slice is $(10)(2h_{i}) \Delta h $ \\
 	Amount of water in i$^{th}$ slice is $(10)(2h_{i})(62.5) \Delta h$
 	\begin{center}
 		\[ \text{Total work required to pump the water: } \int_{0}^{6} (62.5)(20h)(6-h) dh = 45000 \] 
 	\end{center}
 
-	
 }
 \end{document}

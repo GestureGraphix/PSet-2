@@ -7,5 +7,5 @@
 \contentsline {section}{\numberline {1.6}Problem 6: Stewart 6.4.12}{4}{section.1.6}%
 \contentsline {section}{\numberline {1.7}Problem 7: Stewart 6.4.14}{5}{section.1.7}%
 \contentsline {section}{\numberline {1.8}Problem 8: Stewart 6.4.24}{6}{section.1.8}%
-\contentsline {section}{\numberline {1.9}}{6}{section.1.9}%
+\contentsline {section}{\numberline {1.9}Problem 9: Stewart 6.4.26}{6}{section.1.9}%
 \contentsfinish 
