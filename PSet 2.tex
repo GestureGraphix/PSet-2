@@ -79,7 +79,7 @@ bottom of the box. How many raisins are in the box?}
 	\begin{center}
 	\[ \int_{0}^{25} 80 \frac{4}{h + 10} dh = \int_{0}^{25}\frac{320}{h + 10} dh \] 
 	\[ \int_{0}^{25}\frac{320}{h + 10} dh = 320 \ln(x+10) \Big|_{0}^{25}\] 
-	\[ 320 \ln(x+10) \Big|_{0}^{25} = 320ln(25+10) - 320 ln(0 + 10) \approx 400.884\] 
+	\[ 320 \ln(x+10) \Big|_{0}^{25} = 320ln(25+10) - 320 ln(0 + 10) \approx 400.884 \text{raisins}\] 
 		
 	\end{center} 
 	}
@@ -91,13 +91,10 @@ setting. Its density at a depth of $h$ meters from the top is given by $5h$ mill
 cubic meter. Determine the number of milligrams of the mineral contained in the tank.}
 \sol{
 	volume of $i^{th}$ slice $= \pi r^{2}  \Delta h$ \\
-	$ r_{i} = \sqrt{4 - h_{i}^2}$  \\
+	$ r_{i} = \sqrt{4 - (2-h)_{i}^2}$  \\
 	raisins in $i^{th}$ slice = $\pi \left( \sqrt{4 - h_{i}^{2}} \right)^{2} \cdot \Delta h \cdot  5h$ 
 	\begin{center}
-		\[ \int_{0}^{2} \pi \left(4 - h^{2}\right)  5h dh + \int_{0}^{2} \pi (4-h^{2}) 5(h+2) dh \]
-		\[ 5 \pi \int_{0}^{2} 4x-x^{3} dx = 10 \pi x^{2} - \frac{5 \pi x^{4}}{4} \Big|_{0}^{2} = 20 \pi \]  
-		\[ \int_{0}^{2} \pi (4-h^{2}) 5(h+2) dh = 10 \pi x^{2} + 40 \pi x - \frac{5 \pi x^{4} }{4} - \frac{10 \pi x^{3}}{3} \approx 230.3835\] 
-		\[ \int_{0}^{2} \pi \left(4 - h^{2}\right)  5h dh + \int_{0}^{2} \pi (4-h^{2}) 5(h+2) dh \approx 293.215\]
+		\[ \int_{0}^{4} (5h) \pi 4 - (2-h_{i})^{2} dh  \text {mg of mineral}\]
 	\end{center}
 	
 }
@@ -161,9 +158,7 @@ to 14 cm, what is the natural length of the spring?}
 		\[ 300l - 39 = 500 l - 55 \] 
 		\[ -200l = -16 \] 
 		\[ l = \frac{2}{25} \] 
-
-
-
+		\[ 8 \text{ cm}\] 
 	\end{center}
 
 }
@@ -194,6 +189,7 @@ the amount of work done when the winch pulls up $\Delta x$ feet of cable }
 		\[ W_{2} = \int_{25}^{60} 75x \space dx \] 
 		\[ W_{2} = \left[ 75 x \right]^{60}_{25}\] 
 		\[ = \left[ 75 \left( 60 \right) - 75 \left( 24 \right) \right] = 2625\] 
+		\[ W_{1} + W_{2} = 3562.5 \text{ft} \] 
 	\end{center}
 	What does that second part mean? 
 
@@ -205,14 +201,18 @@ the water out of the spout. $r = 3$m and spout = 1m}
 \sol{
 	\\
 	Volume of $i^{th}$ slice is $\pi r^{2} dh$ \\
+	Density: $1000 \frac{kg}{mg^{3}}$
 	Work is the distance traveled times the amount of water moved\\
+	Weight: $(1000kg)(\pi (9 - (3- y_{i})^{2}) \Delta y)(9.8)$
 	\begin{center}
 		\[ r_{i}^{2} = 3^{2} - h_{i}^{2}\] 
 		\[ r_{i} = \sqrt{3^{2} - h_{i}^{2}} \]
 		\[ W = \pi \int_{-3}^{3} (4-y) 9 - h^{2} dh \] 
 		\[ W = \left( 36 \pi - \frac{4x^{3}}{3} - \frac{9 \pi x^{2}}{2} + \frac{x^{4}}{4}\right) \Big|_{-3}^{3} \] 
-		\[ W = 144 \pi \approx 451.389\] 
+		\[ W = (1000kg)(\pi (9 - (3- y_{i})^{2}) \Delta y)(9.8) (1 + y_{i})\] 
+		\[ \int_{0}^{6} (1000kg)(\pi (9 - (3- y_{i})^{2})(1+y))(9.8) \approx 1411200 \ pi  \] 
 	\end{center}
+
 }
 
 \section{Problem 9: Stewart 6.4.26}
